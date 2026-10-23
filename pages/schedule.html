@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Schedule | MG Fitness</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .schedule-table th, .schedule-table td {
+      padding: 1rem;
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+    .schedule-table th {
+      background: #252525;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+    .class-name {
+      font-weight: bold;
+      color: var(--light-text);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="logo">MG <span>Fitness</span></a>
+    <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/membership.html">Membership</a></li>
+        <li><a href="../pages/trainers.html">Trainers</a></li>
+        <li><a href="../pages/schedule.html">Schedule</a></li>
+        <li><a href="../pages/bmi-calculator.html">BMI Calculator</a></li>
+        <li><a href="../pages/gallery.html">Gallery</a></li>
+        <li><a href="../pages/blog.html">Blog</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="min-height: 40vh;">
+    <h1>Weekly Class Schedule</h1>
+    <p>Find the best time for your group workout sessions.</p>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">Timetable</h2>
+    <p class="section-subtitle">Morning & Evening Slots Designed to Fit Your Busy Workday.</p>
+
+    <div style="overflow-x: auto;">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Time Slot</th>
+            <th>Monday</th>
+            <th>Wednesday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>06:00 AM - 07:00 AM</td>
+            <td><span class="class-name">Power Yoga</span><br><small>Studio A</small></td>
+            <td><span class="class-name">Morning HIIT</span><br><small>Studio B</small></td>
+            <td><span class="class-name">Power Yoga</span><br><small>Studio A</small></td>
+            <td><span class="class-name">CrossFit Conditioning</span><br><small>Main Floor</small></td>
+          </tr>
+          <tr>
+            <td>08:00 AM - 09:00 AM</td>
+            <td><span class="class-name">Cardio Blast</span><br><small>Studio B</small></td>
+            <td><span class="class-name">Core & Ab Sculpt</span><br><small>Studio A</small></td>
+            <td><span class="class-name">Cardio Blast</span><br><small>Studio B</small></td>
+            <td><span class="class-name">Zumba Fitness</span><br><small>Studio A</small></td>
+          </tr>
+          <tr>
+            <td>06:00 PM - 07:00 PM</td>
+            <td><span class="class-name">Heavy Strength</span><br><small>Free Weights Zone</small></td>
+            <td><span class="class-name">HIIT Circuit</span><br><small>Studio B</small></td>
+            <td><span class="class-name">Heavy Strength</span><br><small>Free Weights Zone</small></td>
+            <td><span class="class-name">Mobility & Stretch</span><br><small>Studio A</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MG Fitness. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

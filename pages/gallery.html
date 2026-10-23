@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | MG Fitness</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      height: 220px;
+      border: 1px solid var(--border-color);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="logo">MG <span>Fitness</span></a>
+    <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/membership.html">Membership</a></li>
+        <li><a href="../pages/trainers.html">Trainers</a></li>
+        <li><a href="../pages/schedule.html">Schedule</a></li>
+        <li><a href="../pages/bmi-calculator.html">BMI Calculator</a></li>
+        <li><a href="../pages/gallery.html">Gallery</a></li>
+        <li><a href="../pages/blog.html">Blog</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="min-height: 40vh;">
+    <h1>Facility Showcase</h1>
+    <p>Take a peak inside MG Fitness's high-octane environment.</p>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">Gym Atmosphere</h2>
+    <p class="section-subtitle">Take a look around our state-of-the-art facility.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Free Weights Area">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Cardio Equipment">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Functional Training Zone">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="CrossFit Gear">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Dumbbell Rack">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Group Exercise Class">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MG Fitness. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator | MG Fitness</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .calc-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+      background: #121212;
+      color: #fff;
+      font-size: 1rem;
+    }
+    #bmi-result {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 4px;
+      background: #252525;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="logo">MG <span>Fitness</span></a>
+    <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/membership.html">Membership</a></li>
+        <li><a href="../pages/trainers.html">Trainers</a></li>
+        <li><a href="../pages/schedule.html">Schedule</a></li>
+        <li><a href="../pages/bmi-calculator.html">BMI Calculator</a></li>
+        <li><a href="../pages/gallery.html">Gallery</a></li>
+        <li><a href="../pages/blog.html">Blog</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="min-height: 40vh;">
+    <h1>Interactive BMI Calculator</h1>
+    <p>Calculate your Body Mass Index quickly to help set your fitness target.</p>
+  </section>
+
+  <main class="container">
+    <div class="calc-form">
+      <h2 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary);">Check Your BMI</h2>
+      <form id="bmiForm">
+        <div class="form-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" placeholder="e.g. 175" required>
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" placeholder="e.g. 70" required>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Calculate Now</button>
+      </form>
+
+      <div id="bmi-result"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MG Fitness. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('bmiForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const height = parseFloat(document.getElementById('height').value) / 100;
+      const weight = parseFloat(document.getElementById('weight').value);
+      const resultDiv = document.getElementById('bmi-result');
+
+      if (height > 0 && weight > 0) {
+        const bmi = (weight / (height * height)).toFixed(1);
+        let category = '';
+        let color = '#ff5722';
+
+        if (bmi < 18.5) {
+          category = 'Underweight';
+          color = '#ffc107';
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+          category = 'Normal weight';
+          color = '#4caf50';
+        } else if (bmi >= 25 && bmi < 29.9) {
+          category = 'Overweight';
+          color = '#ff9800';
+        } else {
+          category = 'Obesity';
+          color = '#f44336';
+        }
+
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `
+          <h3>Your BMI: <span style="color:${color}">${bmi}</span></h3>
+          <p>Category: <strong>${category}</strong></p>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
